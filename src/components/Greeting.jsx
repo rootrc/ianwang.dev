@@ -1,6 +1,7 @@
 import HoverEmoji from "../containers/HoverEmoji.jsx";
 import SocialMedia from "./SocialMedia.jsx";
 import Button from "./Button.jsx";
+import AnimatedImage from "../containers/AnimatedImage.jsx";
 
 export default function Greeting() {
   return (
@@ -11,10 +12,6 @@ export default function Greeting() {
             <h1 className="text-6xl font-bold text-gray-900">
               Hi, I&apos;m Ian <HoverEmoji />
             </h1>
-            <p className="text-xl text-gray-700 pt-6">
-              Computer Engineering student at the University of Waterloo,
-              passionate about coding and problem-solving.
-            </p>
           </div>
 
           <ul className="space-y-3 text-lg text-gray-700">
@@ -63,10 +60,13 @@ export default function Greeting() {
                 <span>Canadian Computing Olympiad</span>
               </a>
             </li>
-
             <li className="flex items-start gap-2">
               <span className="mr-3">➤</span>
-              <span>Intrested in software engineering, backend systems, and performance-critical code</span>
+              <span>Passionate about programming, problem-solving, and software development</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="mr-3">➤</span>
+              <span>Interested in software engineering, backend systems, and optimizing performance-critical code</span>
             </li>
 
             <li className="flex items-start gap-2">
@@ -85,18 +85,12 @@ export default function Greeting() {
               rel="noopener noreferrer"
               className="button-link"
             >
-              <Button text="Download my resume" />
+              <Button text="My resume" />
             </a>
           </div>
         </div>
 
-        <div className="flex flex-1 justify-center">
-          <img
-            src="The Magician.jpg"
-            alt="The Magician tarot card"
-            className="w-64 rounded-xl shadow-lg sm:w-72 md:w-80"
-          />
-        </div>
+        <AnimatedImage/>
       </div>
     </section>
   );
