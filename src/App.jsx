@@ -1,7 +1,11 @@
+import Header from "./components/header/Header";
+import Greeting from "./components/greeting/Greeting";
+
 function App() {
   return (
-    <div className="App">
-      <h1>Hello World!</h1>
+    <div>
+      <Header />
+      <Greeting />
     </div>
   );
 }
