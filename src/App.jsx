@@ -1,13 +1,11 @@
-import Header from "./components/header/Header";
-import Greeting from "./components/greeting/Greeting";
+import Header from "./components/Header";
+import Greeting from "./components/Greeting";
 
-function App() {
+export default function App() {
   return (
-    <div>
-      <Header />
-      <Greeting />
+    <div className="min-h-screen bg-linear-to-br from-slate-100 to-slate-300">
+        <Header />
+        <Greeting />
     </div>
   );
 }
-
-export default App;
