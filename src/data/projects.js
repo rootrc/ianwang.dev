@@ -37,6 +37,6 @@ export const projects = [
       "A roguelike where you navigate semi-random icy caves, uncover abilities in chests, avoid traps, and find the best path down—all while your light fades and time runs out.",
     image: "kindle_thumbnail.png",
     tech: ["Java", "Swing (Java)"],
-    github: "thing",
+    github: "https://github.com/rootrc/Kindle-Game",
   },
 ];
