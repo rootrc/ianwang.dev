@@ -17,4 +17,5 @@ createRoot(document.getElementById('root')).render(
       <TopButton />
     </div>
   </StrictMode>,
+  console.log("If you're reading this, Hi i'm Ian!")
 )

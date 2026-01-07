@@ -14,7 +14,7 @@ export default function Header() {
             </a>
           </li>
           <li className="flex-1" />
-          {["Projects", "Skills"].map((item) => (
+          {["Projects"].map((item) => (
             <li key={item}>
               <a
                 href={`#${item.toLowerCase()}`}
