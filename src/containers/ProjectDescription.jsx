@@ -7,12 +7,15 @@ const backdropVariants = {
 };
 
 const descriptionVariants = {
-  hidden: { opacity: 0, scale: 0.95, y: 20 },
+  hidden: { opacity: 0, scale: 0.96, y: 24 },
   visible: {
     opacity: 1,
     scale: 1,
     y: 0,
-    transition: { duration: 0.3, ease: "easeOut" },
+    transition: {
+      duration: 0.35,
+      ease: [0.16, 1, 0.3, 1],
+    },
   },
 };
 
@@ -21,9 +24,7 @@ export default function ProjectDescription({ project, onClose }) {
     if (!project) return;
 
     const handleKeyDown = (e) => {
-      if (e.key === "Escape") {
-        onClose();
-      }
+      if (e.key === "Escape") onClose();
     };
 
     window.addEventListener("keydown", handleKeyDown);
@@ -34,7 +35,7 @@ export default function ProjectDescription({ project, onClose }) {
     <AnimatePresence>
       {project && (
         <motion.div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4 backdrop-blur-sm"
           variants={backdropVariants}
           initial="hidden"
           animate="visible"
@@ -47,36 +48,31 @@ export default function ProjectDescription({ project, onClose }) {
             animate="visible"
             exit="hidden"
             onClick={(e) => e.stopPropagation()}
-            className="relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-xl bg-white p-6 shadow-xl"
+            className="relative w-full max-w-3xl max-h-[85vh] overflow-y-auto rounded-lg bg-slate-900 p-8 shadow-2xl text-slate-100"
           >
             <button
               onClick={onClose}
-              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-xl"
-              aria-label="Close Button"
+              className="absolute top-4 right-4 rounded-full p-2 text-slate-400 hover:bg-slate-800 hover:text-white transition-colors"
+              aria-label="Close"
             >
-              <i className="fas fa-times text-xl"></i>
+              ✕
             </button>
-
-            <h2 className="text-2xl font-bold text-gray-900">
+            <h2 className="text-3xl font-bold text-indigo-600">
               {project.title}
             </h2>
-
-            <p className="mt-2 text-gray-600 mb-2">
+            <p className="mt-3 max-w-2xl text-slate-300">
               {project.longDescription}
             </p>
-
-            <img
-              src={project.image}
-              alt={project.title}
-              className="mb-4 mx-auto w-full max-w-4xl max-h-[50vh] object-contain rounded-lg"
-            />
-
+            <div className="mt-4 overflow-hidden rounded-md border border-slate-700">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full max-h-[45vh] object-contain bg-slate-800"
+              />
+            </div>
             <div className="mt-4 flex flex-wrap gap-2">
               {project.tech.map((tech) => (
-                <span
-                  key={tech}
-                  className="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700"
-                >
+                <span key={tech} className="rounded-full bg-slate-800 px-3 py-1 text-sm text-indigo-500">
                   {tech}
                 </span>
               ))}

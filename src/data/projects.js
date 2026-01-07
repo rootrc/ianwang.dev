@@ -26,7 +26,7 @@ export const projects = [
     longDescription:
       "A Python-based GUI application that fetches .lyx files from Google Drive, converts them to HTML, and renders output to a web browser, eliminating manual conversion for previewing files.",
     image: "lyx_thumbnail.png",
-    tech: ["Python, Tkinter"],
+    tech: ["Python", "Tkinter"],
     github: "https://github.com/alanwang981/lyx-previewer",
   },
   {

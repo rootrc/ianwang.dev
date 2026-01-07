@@ -10,7 +10,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <div className="min-h-screen bg-linear-to-br from-slate-100 to-slate-300 font-text">
+    <div className="min-h-screen bg-white text-slate-900 font-text">
       <Header />
       <Greeting />
       <Projects />

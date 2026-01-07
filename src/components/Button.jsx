@@ -1,14 +1,12 @@
-export default function Button({ text, href, newTab = false, className = "" }) {
+export default function Button({ text, href, newTab = true}) {
   return (
-    <span className={`mt-5 ${className}`}>
-      <a
-        href={href}
-        target={newTab ? "_blank" : "_self"}
-        rel={newTab ? "noopener noreferrer" : undefined}
-        className="inline-block bg-amber-600 border border-amber-600 text-white font-bold px-6 py-3 rounded-md uppercase text-center no-underline transition-all duration-300 ease-in-out hover:bg-amber-700 hover:-translate-y-1 cursor-pointer mr-12 last:mr-0 text-base sm:text-sm sm:px-5 sm:py-3 xs:text-xs"
-      >
-        {text}
-      </a>
-    </span>
+    <a
+      href={href}
+      target={newTab ? "_blank" : "_self"}
+      rel={newTab ? "noopener noreferrer" : undefined}
+      classname="inline-block mt-5 px-6 py-3 text-sm sm:text-base font-semibold uppercase bg-indigo-600 text-white border border-indigo-600 rounded-sm text-center no-underline transition-all duration-200 ease-in-out hover:bg-indigo-00 hover:-translate-y-0.5 hover:shadow-md"
+    >
+      {text}
+    </a>
   );
 }
