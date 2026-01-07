@@ -38,7 +38,7 @@ export default function ProjectCard({ project }) {
         <h2 className="mt-4 text-xl font-semibold text-slate-900 transition-colors duration-200 group-hover:text-indigo-500">
           {project.title}
         </h2>
-        <p className="mt-2 text-sm leading-relaxed text-slate-600 line-clamp-2">
+        <p className="mt-2 text-m leading-relaxed text-slate-600 line-clamp-2">
           {project.description}
         </p>
         {project.tech && (

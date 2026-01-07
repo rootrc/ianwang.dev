@@ -31,6 +31,15 @@ export default function ProjectDescription({ project, onClose }) {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [project, onClose]);
 
+  useEffect(() => {
+    if (!project) return;
+
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [project]);
+
   return (
     <AnimatePresence>
       {project && (
@@ -48,7 +57,7 @@ export default function ProjectDescription({ project, onClose }) {
             animate="visible"
             exit="hidden"
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-3xl max-h-[85vh] overflow-y-auto rounded-lg bg-slate-900 p-8 shadow-2xl text-slate-100"
+            className="relative w-full max-w-3xl max-h-[92vh] overflow-y-auto rounded-lg bg-slate-900 p-8  shadow-2xl text-slate-100"
           >
             <button
               onClick={onClose}
@@ -67,16 +76,27 @@ export default function ProjectDescription({ project, onClose }) {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full max-h-[45vh] object-contain bg-slate-800"
+                className="w-full max-h-[60vh] object-contain bg-slate-800"
               />
             </div>
-            <div className="mt-4 flex flex-wrap gap-2">
+            <span className="mt-4 flex flex-wrap gap-2">
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-lg text-sm flex items-center gap-2 mr-4 transition-all duration-200 ease-out hover:-translate-y-1 "
+              >
+                <i className="fab fa-github text-2xl"></i>
+                GitHub
+              </a>
               {project.tech.map((tech) => (
                 <span key={tech} className="rounded-full bg-slate-800 px-3 py-1 text-sm text-indigo-500">
                   {tech}
                 </span>
               ))}
-            </div>
+
+
+            </span>
           </motion.div>
         </motion.div>
       )}
