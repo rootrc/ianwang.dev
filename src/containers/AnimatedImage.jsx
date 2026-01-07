@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 export default function AnimatedImage() {
   return (
     <div className="flex flex-1 justify-center">
-      <a href="https://en.wikipedia.org/wiki/The_Magician_(tarot_card)" target="_blank" rel="noopener noreferrer">
+      <a href="" target="_blank" rel="noopener noreferrer">
         <motion.img
-          src="/The Magician.jpg"
-          alt="The Magician tarot card"
+          src="/photo.png"
+          alt="Photo of Ian"
           className="w-64 sm:w-72 md:w-80 rounded-xl shadow-lg cursor-pointer"
           initial={{ opacity: 0, y: 30 }}
           animate={{

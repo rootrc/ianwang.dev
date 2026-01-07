@@ -75,12 +75,12 @@ export default function Greeting() {
             </li>
           </ul>
           <SocialMedia />
-          <div className="flex justify-start space-x-16">
-            <a href="#contact" className="button-link">
+          <div className="flex justify-start space-x-16 mt-8">
+            {/* <a href="#contact" className="button-link">
               <Button text="Contact me" />
-            </a>
+            </a> */}
             <a
-              href="https://www.linkedin.com/in/ian-wang-362b34305/"
+              href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="button-link"
