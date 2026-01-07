@@ -21,7 +21,7 @@ export default function SocialMedia() {
 
       <a
         href="mailto:ianwang5190@gmail.com"
-        className="w-12 h-12 rounded-full flex items-center justify-center bg-red-600 text-white hover:bg-red-400 hover:shadow-xl hover:scale-110 transform transition-all duration-300"
+        className="w-12 h-12 rounded-full flex items-center justify-center bg-red-500 text-white hover:bg-red-400 hover:shadow-xl hover:scale-110 transform transition-all duration-300"
       >
         <i className="fas fa-envelope text-2xl"></i>
       </a>

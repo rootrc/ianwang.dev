@@ -5,12 +5,12 @@ import AnimatedImage from "../containers/AnimatedImage.jsx";
 
 export default function Greeting() {
   return (
-    <section className="mx-auto max-w-8xl px-16 py-10">
+    <section id="greeting" className="mx-auto max-w-8xl px-16 py-10">
       <div className="flex flex-col-reverse items-center gap-10 md:flex-row">
         <div className="flex-1 space-y-6">
           <div className="space-y-2">
             <h1 className="text-6xl font-bold text-gray-900">
-              Hi, I&apos;m Ian <HoverEmoji />
+              Hi, I&apos;m Ian {/*<HoverEmoji />*/}
             </h1>
           </div>
 
@@ -76,21 +76,12 @@ export default function Greeting() {
           </ul>
           <SocialMedia />
           <div className="flex justify-start space-x-16 mt-8">
-            {/* <a href="#contact" className="button-link">
-              <Button text="Contact me" />
-            </a> */}
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="button-link"
-            >
-              <Button text="My resume" />
-            </a>
+            {/* <Button text="Contact me" href="#contact" /> */}
+            <Button text="My resume" href="/resume.pdf" />
           </div>
         </div>
 
-        <AnimatedImage/>
+        <AnimatedImage />
       </div>
     </section>
   );
