@@ -33,7 +33,7 @@ export default function ProjectCard({ project }) {
         <h2 className="mt-4 text-xl font-semibold text-gray-900">
           {project.title}
         </h2>
-        <p className="mt-1 text-sm text-gray-500">
+        <p className="mt-1 text-m text-gray-500">
           {project.description}
         </p>
       </motion.div>

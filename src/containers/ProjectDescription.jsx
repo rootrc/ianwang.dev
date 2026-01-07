@@ -1,4 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
+import { useEffect } from "react";
 
 const backdropVariants = {
   hidden: { opacity: 0 },
@@ -16,6 +17,19 @@ const descriptionVariants = {
 };
 
 export default function ProjectDescription({ project, onClose }) {
+  useEffect(() => {
+    if (!project) return;
+
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") {
+        onClose();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [project, onClose]);
+
   return (
     <AnimatePresence>
       {project && (
@@ -25,7 +39,7 @@ export default function ProjectDescription({ project, onClose }) {
           initial="hidden"
           animate="visible"
           exit="hidden"
-          onClick={() => onClose()}
+          onClick={onClose}
         >
           <motion.div
             variants={descriptionVariants}
@@ -35,9 +49,8 @@ export default function ProjectDescription({ project, onClose }) {
             onClick={(e) => e.stopPropagation()}
             className="relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-xl bg-white p-6 shadow-xl"
           >
-
             <button
-              onClick={() => onClose()}
+              onClick={onClose}
               className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-xl"
               aria-label="Close Button"
             >
@@ -48,16 +61,16 @@ export default function ProjectDescription({ project, onClose }) {
               {project.title}
             </h2>
 
-            <p className="mt-2 text-gray-600">
+            <p className="mt-2 text-gray-600 mb-2">
               {project.longDescription}
             </p>
 
             <img
               src={project.image}
               alt={project.title}
-              className="mb-4 w-full rounded-lg"
+              className="mb-4 mx-auto w-full max-w-4xl max-h-[50vh] object-contain rounded-lg"
             />
-            
+
             <div className="mt-4 flex flex-wrap gap-2">
               {project.tech.map((tech) => (
                 <span
@@ -67,21 +80,6 @@ export default function ProjectDescription({ project, onClose }) {
                   {tech}
                 </span>
               ))}
-            </div>
-
-            <div className="mt-6 flex gap-4">
-              <motion.a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-lg text-sm flex items-center gap-2"
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <i className="fab fa-github text-2xl"></i>
-                GitHub
-              </motion.a>
-
             </div>
           </motion.div>
         </motion.div>
