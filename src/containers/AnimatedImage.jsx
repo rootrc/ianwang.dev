@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export default function AnimatedImage() {
   return (
     <div className="flex flex-1 justify-center mt-8">
-      <a href="" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.linkedin.com/in/ian-wang-362b34305/" target="_blank" rel="noopener noreferrer">
         <motion.img
           src="/portrait.jpg"
           alt="Portrait of Ian"
