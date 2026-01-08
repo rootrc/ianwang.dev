@@ -91,7 +91,7 @@ export default function Greeting() {
           <motion.div variants={item} className="flex items-center gap-16">
             <SocialMedia />
             <span className="-mt-4">
-              <Button text="View Resume" href="/resume.pdf" />
+              <Button text="View Resume" href="/Ian_Wang_Resume.pdf" />
             </span>
           </motion.div>
         </motion.div>
