@@ -22,9 +22,9 @@ export const projects = [
   {
     id: 2,
     title: "LyX Previewer",
-    description: "An application to preview your files in Google Drive",
+    description: "An application to preview your LyX files in Google Drive",
     longDescription:
-      "A Python GUI app that fetches .lyx files from Google Drive, converts them to HTML, and previews them in a browser—removing manual conversion steps.",
+      "A Python GUI app that fetches LyX files from Google Drive, converts them to HTML, and previews them in a browser—removing manual conversion steps.",
     image: "lyx_thumbnail.png",
     tech: ["Python", "Tkinter"],
     github: "https://github.com/alanwang981/lyx-previewer",

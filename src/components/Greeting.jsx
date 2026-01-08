@@ -77,7 +77,7 @@ export default function Greeting() {
                 </a>
               </>,
               "I like algorithms, systems, and making code run fast!",
-              "In my free time, I solve nonograms, read, and work on my puzzle game",
+              "In my free time, I solve nonograms, read books, and work on my puzzle game",
               "Seeking Summer 2026 SWE Internships",
             ].map((content, i) => (
               <motion.li key={i} variants={item} className="flex gap-2 group">
