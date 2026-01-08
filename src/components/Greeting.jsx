@@ -58,7 +58,7 @@ export default function Greeting() {
                   href="https://uwaterloo.ca/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative inline-flex items-center gap-2 font-medium text-yellow-500 hover:text-yellow-600"
+                  className="relative inline-flex items-center gap-2 font-medium text-yellow-500 transition-colors duration-300 hover:text-yellow-600 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:bg-yellow-500 after:transition-colors hover:after:bg-yellow-600"
                 >
                   <img src="/uwaterloo.jpg" alt="UWaterloo" className="h-6 w-6 rounded-full" />
                   <span>UWaterloo</span>
@@ -70,7 +70,7 @@ export default function Greeting() {
                   href="https://cemc.uwaterloo.ca/sites/default/files/documents/2024/2024CCOResults.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative inline-flex items-center gap-2 font-medium text-blue-400 hover:text-blue-500"
+                  className="relative inline-flex items-center gap-2 font-medium text-blue-400 transition-colors duration-300 hover:text-blue-500 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:bg-blue-400 after:transition-colors hover:after:bg-blue-500"
                 >
                   <img src="/CEMC.png" alt="CEMC" className="h-6 w-6 rounded-full" />
                   <span>Canadian Computing Olympiad</span>
