@@ -11,7 +11,7 @@ export default function SocialMedia() {
       </a>
 
       <a
-        href="https://www.linkedin.com/in/ian-wang-362b34305/"
+        href="https://www.linkedin.com/in/ianwang3/"
         target="_blank"
         rel="noopener noreferrer"
         className="w-12 h-12 rounded-full flex items-center justify-center bg-blue-700 text-white hover:bg-blue-500 hover:shadow-xl hover:scale-110 transform transition-all duration-300"
