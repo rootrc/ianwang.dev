@@ -11,7 +11,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const splashScreen = {
   enabled: true,
-  duration: 2200,
+  duration: 2400,
 };
 
 function App() {
