@@ -2,16 +2,17 @@ import { useState, useEffect, StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 
+import SplashScreen from "./containers/SplashScreen";
 import Header from "./containers/Header";
 import Greeting from "./components/Greeting";
 import Projects from "./components/Projects";
+import Footer from './components/Footer';
 import TopButton from "./containers/TopButton";
-import SplashScreen from "./containers/SplashScreen";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const splashScreen = {
   enabled: true,
-  duration: 2400,
+  duration: 2000,
 };
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
           <Header />
           <Greeting />
           <Projects />
+          <Footer />
           <TopButton />
         </div>
       )}

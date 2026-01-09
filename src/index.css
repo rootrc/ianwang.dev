@@ -50,12 +50,12 @@
   .animate-typing {
     width: 8ch;
     animation:
-      typing 1.6s steps(8) forwards,
+      typing 1.2s steps(8) forwards,
       blink 0.2s step-end 2,
       finish 0.6s ease forwards;
     animation-delay:
       0s,
-      1.6s,
-      2s;
+      1.2s,
+      1.6s;
   }
 }
