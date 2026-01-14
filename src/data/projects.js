@@ -4,9 +4,9 @@ export const projects = [
     title: "PRISM",
     description: "A real-time continuous delirium monitoring wearable",
     longDescription:
-      "A real-time hopsital delirium-monitoring wearable using an Arduino Nano ESP32, streaming biometric sensor data to an ExpressJS backend with a user-friendly frontend.",
+      "A real-time hospital delirium-monitoring wearable using an Arduino Nano ESP32, streaming biometric sensor data to an ExpressJS backend with a user-friendly frontend.",
     image: "PRISM_thumbnail.png",
-    tech: ["HTML", "CSS", "JavaScript", "Express.js"],
+    tech: ["HTML", "CSS", "JavaScript", "Node.js", "Express.js"],
     github: "https://github.com/boccos/ECE198",
   },
   {
