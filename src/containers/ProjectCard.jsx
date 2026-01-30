@@ -42,12 +42,17 @@ export default function ProjectCard({ project }) {
           {project.description}
         </p>
         {project.tech && (
-          <div className="mt-3 flex flex-wrap gap-2">
-            {project.tech.map((t) => (
+          <div className="mt-3 flex flex-wrap gap-1">
+            {project.tech.slice(0, 4).map((t) => (
               <span key={t} className="rounded-full bg-slate-200 px-2 py-0.5 text-xs text-slate-700">
                 {t}
               </span>
             ))}
+            {project.tech.length > 4 && (
+              <span className="rounded-full bg-slate-200 px-2 py-0.5 text-xs text-slate-700">
+                ...
+              </span>
+            )}
           </div>
         )}
         <div className="absolute top-3 right-3 rounded-full bg-white/80 px-2 py-1 text-xl font-medium text-slate-700 opacity-0 transition-opacity group-hover:opacity-100">

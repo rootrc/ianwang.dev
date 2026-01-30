@@ -1,16 +1,36 @@
 export const projects = [
   {
     id: 0,
+    title: "My Website",
+    description: "My personal website",
+    longDescription:
+      "My personal website created with React and Tailwind CSS. Thank you for visiting!",
+    image: "website_thumbnail.png",
+    tech: ["React", "Tailwind CSS", "JavaScript", "Vercel"],
+    github: "https://github.com/rootrc/ianwang.dev",
+  },
+  {
+    id: 1,
+    title: "Graph Benchmarker",
+    description: "Learn, explore, and analyze graph algorithms with live visualizations",
+    longDescription:
+    "An interactive full-stack web application that enables real-time visualization, comparison, and performance benchmarking of graph algorithms.",
+    image: "graph_benchmarker_thumbnail.png",
+    tech: ["React", "Tailwind CSS", "TypeScript", "Node.js", "Express", "Vercel", "Render"],
+    github: "https://github.com/rootrc/Graph-Benchmarker",
+  },
+  {
+    id: 2,
     title: "PRISM",
     description: "A real-time continuous delirium monitoring wearable",
     longDescription:
       "A real-time hospital delirium-monitoring wearable using an Arduino Nano ESP32, streaming biometric sensor data to an ExpressJS backend with a user-friendly frontend.",
     image: "PRISM_thumbnail.png",
-    tech: ["HTML", "CSS", "JavaScript", "Node.js", "Express.js"],
+    tech: ["HTML", "CSS", "JavaScript", "Node.js", "Express"],
     github: "https://github.com/boccos/ECE198",
   },
   {
-    id: 1,
+    id: 3,
     title: "Continent Procedural Generator",
     description: "A tool for creating detailed, procedural maps of fantasy continents",
     longDescription:
@@ -20,7 +40,7 @@ export const projects = [
     github: "https://github.com/rootrc/Continent-Procedural-Generator",
   },
   {
-    id: 2,
+    id: 4,
     title: "LyX Previewer",
     description: "An application to preview your LyX files in Google Drive",
     longDescription:
@@ -30,7 +50,7 @@ export const projects = [
     github: "https://github.com/alanwang981/lyx-previewer",
   },
   {
-    id: 3,
+    id: 5,
     title: "Kindle Game",
     description: "A dynamic, procedurally generated game in Java Swing",
     longDescription:

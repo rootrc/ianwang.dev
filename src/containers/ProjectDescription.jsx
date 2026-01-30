@@ -90,7 +90,7 @@ export default function ProjectDescription({ project, onClose }) {
                 GitHub
               </a>
               {project.tech.map((tech) => (
-                <span key={tech} className="rounded-full bg-slate-800 px-3 py-1 text-sm text-indigo-500">
+                <span key={tech} className="rounded-full bg-slate-800 px-3 py-1 text-xs text-indigo-500">
                   {tech}
                 </span>
               ))}
