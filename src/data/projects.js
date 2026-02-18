@@ -2,11 +2,11 @@ export const projects = [
   {
     id: 0,
     title: "My Website",
-    description: "My personal website",
+    description: "My personal website, created with React and Tailwind CSS",
     longDescription:
       "My personal website created with React and Tailwind CSS. Thank you for visiting!",
     image: "website_thumbnail.png",
-    tech: ["React", "Tailwind CSS", "JavaScript", "Vercel"],
+    tech: ["React", "Tailwind CSS", "JavaScript"],
     github: "https://github.com/rootrc/ianwang.dev",
   },
   {
@@ -16,7 +16,7 @@ export const projects = [
     longDescription:
     "An interactive full-stack web application that enables real-time visualization, comparison, and performance benchmarking of graph algorithms.",
     image: "graph_benchmarker_thumbnail.png",
-    tech: ["React", "Tailwind CSS", "TypeScript", "Node.js", "Express", "Vercel", "Render"],
+    tech: ["TypeScript", "React", "Tailwind CSS", "Node.js", "Express", "PostgreSQL"],
     github: "https://github.com/rootrc/Graph-Benchmarker",
   },
   {
